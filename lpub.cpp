@@ -471,10 +471,10 @@ Gui::Gui()
 
     fitMode = FitVisible;
 
-#ifdef __APPLE__
-    extern void qt_mac_set_native_menubar(bool);
-    qt_mac_set_native_menubar(true);
-#endif
+//#ifdef __APPLE__
+//    extern void qt_mac_set_native_menubar(bool);
+//    qt_mac_set_native_menubar(true);
+//#endif
 
     Preferences::getRequireds();
     Render::setRenderer(Preferences::preferredRenderer);

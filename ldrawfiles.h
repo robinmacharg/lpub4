@@ -30,7 +30,7 @@
 #define LDRAWFILES_H
 
 #include <QMessageBox>
-#include <QStringList>
+//#include <QStringList>
 #include <QString>
 #include <QMap>
 #include <QDateTime>

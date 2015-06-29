@@ -16,6 +16,8 @@
 ****************************************************************************/
 
 #include <QGraphicsItem>
+#include <QMenu>
+#include <QAction>
 
 #include "ranges.h"
 #include "ranges_item.h"

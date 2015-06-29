@@ -32,6 +32,7 @@
 
 #include <QMainWindow>
 #include <QTextCursor>
+#include <QTextEdit>
 
 class QTextEdit;
 class LDrawFile;

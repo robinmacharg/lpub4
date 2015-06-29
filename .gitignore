@@ -4,3 +4,5 @@ moc/*
 rcc/*
 ui_preferences.h
 lpub
+
+lpub.pro.user

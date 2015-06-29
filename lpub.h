@@ -492,7 +492,7 @@ public slots:
     if (1) {
       statusBarMsg(QString("%1 %2:%3") .arg(errorMsg) .arg(here.modelName) .arg(here.lineNumber));
     } else {
-      QMessageBox::warning(this,tr("LPub"),tr(errorMsg.toAscii()));
+      QMessageBox::warning(this,tr("LPub"),tr(errorMsg.toLatin1()));
     }
   }
   

@@ -62,7 +62,8 @@ void BackgroundItem::setBackground(
   QColor penColor,brushColor;  
   QRectF prect(bt/2,bt/2,pixmap->width()-bt,pixmap->height()-bt); // was -1-bt
 
-  pixmap->setAlphaChannel(*pixmap);
+  // RMM: TODO: commented out to get compilation working
+//  pixmap->setAlphaChannel(*pixmap);
   pixmap->fill(Qt::transparent);
 
   QPainter painter(pixmap);

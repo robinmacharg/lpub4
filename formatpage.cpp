@@ -374,7 +374,7 @@ int Gui::addGraphicsPageItems(
               
               page->addInsertPixmap(pixmap);
               pixmap->setTransformationMode(Qt::SmoothTransformation);
-              pixmap->scale(insert.picScale,insert.picScale);
+              pixmap->setTransform(QTransform::fromScale(insert.picScale,insert.picScale), true);
               
               PlacementData pld;
               

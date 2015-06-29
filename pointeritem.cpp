@@ -219,7 +219,7 @@ void CalloutPointerItem::drawPointerPoly()
   }
   
   head->resetTransform();
-  head->rotate(angle);
+  head->setTransform(QTransform().rotate(angle));
   head->setPos(points[Tip]);
   addToGroup(head);
 

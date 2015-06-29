@@ -389,7 +389,7 @@ void Pli::partClass(
     QRegExp rx("^(\\w+)\\s+([0-9a-zA-Z]+).*$");
     if (pclass.contains(rx)) {
       pclass = rx.cap(1);
-      if (rx.numCaptures() == 2 && rx.cap(1) == "Technic") {
+      if (rx.captureCount() == 2 && rx.cap(1) == "Technic") {
         pclass += rx.cap(2);
       }
     } else {
@@ -1666,13 +1666,13 @@ void PliBackgroundItem::resize(QPointF grabbed)
   grabber->setPos(point.x()-grabSize()/2,point.y()-grabSize()/2);
 
   resetTransform();
-  scale(scaleX,scaleY);
+  setTransform(QTransform::fromScale(scaleX, scaleY), true);
     
-  QList<QGraphicsItem *> kids = children();
+  QList<QGraphicsItem *> kids = childItems();
     
   for (int i = 0; i < kids.size(); i++) {
     kids[i]->resetTransform();
-    kids[i]->scale(1.0/scaleX,1.0/scaleY);
+    kids[i]->setTransform(QTransform::fromScale(1.0/scaleX, 1.0/scaleY), true);
   }
     
   sizeChanged = true;

@@ -28,6 +28,9 @@
  ***************************************************************************/
 
 #include <QtGui>
+#include <QAction>
+#include <QToolbar>
+#include <QScrollBar>
 
 #include "editwindow.h"
 #include "highlighter.h"

@@ -27,10 +27,13 @@
  ***************************************************************************/
 
 #include "ldrawfiles.h"
+#include <Qt>
 #include <QtGui>
 #include <QFile>
 #include <QList>
 #include <QRegExp>
+#include <QApplication>
+
 #include "name.h"
 #include "paths.h"
 

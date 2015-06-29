@@ -121,7 +121,7 @@ void PreferencesDialog::on_browsePli_clicked()
   dialog.setWindowTitle(tr("Locate Parts List orientation/size file"));
   dialog.setFileMode(QFileDialog::ExistingFile);
 
-  dialog.setFilter("LDraw (*.mpd,*.dat,*.ldr)");
+  dialog.setNameFilter("LDraw (*.mpd,*.dat,*.ldr)");
 
   if (dialog.exec()) {
     QStringList selectedFiles = dialog.selectedFiles();

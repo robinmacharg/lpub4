@@ -35,6 +35,8 @@
 #include <QGraphicsScene>
 #include <QString>
 #include <QFileInfo>
+#include <QLineEdit>
+
 #include "lpub.h"
 #include "ranges.h"
 #include "callout.h"
@@ -64,7 +66,7 @@ static void remove_group(
     QString line = in.at(i);
 
     if (line.contains(bgt)) {
-      if (bgt.cap(bgt.numCaptures()) == group) {
+      if (bgt.cap(bgt.captureCount()) == group) {
         i++;
       } else {
         out << line;
@@ -1056,7 +1058,7 @@ int Gui::findPage(
 
     QStringList tokens, addTokens;
 
-    switch (line.toAscii()[0]) {
+    switch (line.toLatin1()[0]) {
       case '1':
         split(line,tokens);
 
@@ -1405,7 +1407,7 @@ int Gui::getBOMParts(
       line = line.mid(8).trimmed();
     }
 
-    switch (line.toAscii()[0]) {
+    switch (line.toLatin1()[0]) {
       case '1':
         if ( ! partIgnore && ! pliIgnore && ! synthBegin) {
 
